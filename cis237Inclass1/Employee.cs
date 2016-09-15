@@ -41,8 +41,12 @@ namespace cis237Inclass1
         //************************
         //Public Methods
         //************************
+        // Using the override keyword, the method will override the automatic one that
+        // comes with every single object that is created.
         public override string ToString()
         {
+            // the this keyword is used to reference 'this' class. It allows us to
+            // reference things that are declared at thiss classes 'class level'
             return this._firstName + " " + this._lastName;
         }
 
@@ -54,6 +58,7 @@ namespace cis237Inclass1
         //************************
         //Constructor
         //************************
+        // A Constructor that takes three parameters
         public Employee(string firstName, string lastName, decimal weeklySalary)
         {
             this._firstName = firstName;
@@ -61,6 +66,9 @@ namespace cis237Inclass1
             this._weeklySalary = weeklySalary;
         }
 
+        // An empty constructor. We must add it back in because as soon as a constructor is
+        // added to a class, the empty default constructor is no longer available. We are
+        // required to write it ourselves if we want it.
         public Employee()
         {
             //Do Nothing
